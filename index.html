@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Kỷ Niệm - Hành Trình Của Con</title>
+    <meta name="description" content="Album lưu giữ những khoảnh khắc đáng nhớ và kỷ niệm đẹp về con yêu">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-heart"></i>
+                <span>Album Kỷ Niệm</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#gallery">Thư Viện</a></li>
+                <li><a href="#memories">Kỷ Niệm</a></li>
+                <li><a href="#about">Về Con</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="highlight">Hành Trình</span> Của Con
+                </h1>
+                <p class="hero-subtitle">
+                    Mỗi khoảnh khắc đều là một món quà quý giá, mỗi kỷ niệm đều đáng trân trọng
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1000">0</span>
+                        <span class="stat-label">Khoảnh Khắc</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="365">0</span>
+                        <span class="stat-label">Ngày Yêu Thương</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="24">0</span>
+                        <span class="stat-label">Giờ Mỗi Ngày</span>
+                    </div>
+                </div>
+                <button class="cta-button" onclick="scrollToSection('timeline')">
+                    <i class="fas fa-play"></i>
+                    Khám Phá Hành Trình
+                </button>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=500&fit=crop&crop=face" alt="Kỷ niệm đẹp" class="hero-photo">
+                    <div class="card-overlay">
+                        <i class="fas fa-heart"></i>
+                        <span>Con yêu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hành Trình Phát Triển</h2>
+                <p>Những mốc thời gian đáng nhớ trong cuộc đời con</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Chào Đời</h3>
+                        <p class="timeline-date">Ngày đầu tiên con đến với thế giới</p>
+                        <p>Khoảnh khắc thiêng liêng nhất, khi con cất tiếng khóc đầu tiên và mở mắt nhìn thế giới xung quanh.</p>
+                        <div class="timeline-image">
+                            <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=300&h=200&fit=crop" alt="Chào đời">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Nụ Cười Đầu Tiên</h3>
+                        <p class="timeline-date">Nụ cười làm tan chảy trái tim</p>
+                        <p>Con bắt đầu biết cười, nụ cười trong sáng và hồn nhiên làm cho cả gia đình hạnh phúc vô bờ.</p>
+                        <div class="timeline-image">
+                            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=200&fit=crop" alt="Nụ cười đầu tiên">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <i class="fas fa-crawling"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Biết Bò</h3>
+                        <p class="timeline-date">Bước đầu khám phá thế giới</p>
+                        <p>Con bắt đầu biết bò, khám phá mọi ngóc ngách trong nhà với sự tò mò và thích thú.</p>
+                        <div class="timeline-image">
+                            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=200&fit=crop" alt="Biết bò">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Bước Đi Đầu Tiên</h3>
+                        <p class="timeline-date">Hành trình mới bắt đầu</p>
+                        <p>Con đứng lên và bước những bước đi đầu tiên, mở ra một chương mới trong cuộc đời.</p>
+                        <div class="timeline-image">
+                            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=200&fit=crop" alt="Bước đi đầu tiên">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Thư Viện Ảnh</h2>
+                <p>Những khoảnh khắc đáng nhớ được lưu giữ</p>
+            </div>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Tất Cả</button>
+                <button class="filter-btn" data-filter="family">Gia Đình</button>
+                <button class="filter-btn" data-filter="play">Vui Chơi</button>
+                <button class="filter-btn" data-filter="milestone">Cột Mốc</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="family">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop" alt="Gia đình">
+                    <div class="gallery-overlay">
+                        <h3>Gia Đình Hạnh Phúc</h3>
+                        <p>Khoảnh khắc sum vầy bên nhau</p>
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="play">
+                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop" alt="Vui chơi">
+                    <div class="gallery-overlay">
+                        <h3>Giờ Chơi</h3>
+                        <p>Niềm vui trong từng hoạt động</p>
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="milestone">
+                    <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop" alt="Cột mốc">
+                    <div class="gallery-overlay">
+                        <h3>Cột Mốc Quan Trọng</h3>
+                        <p>Những bước tiến đáng tự hào</p>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="family">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop" alt="Gia đình">
+                    <div class="gallery-overlay">
+                        <h3>Bữa Ăn Gia Đình</h3>
+                        <p>Những bữa cơm ấm cúng</p>
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="play">
+                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop" alt="Vui chơi">
+                    <div class="gallery-overlay">
+                        <h3>Khám Phá</h3>
+                        <p>Thế giới qua đôi mắt con</p>
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="milestone">
+                    <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop" alt="Cột mốc">
+                    <div class="gallery-overlay">
+                        <h3>Thành Tựu</h3>
+                        <p>Những thành công nhỏ bé</p>
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memories" class="memories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Những Kỷ Niệm Đáng Nhớ</h2>
+                <p>Mỗi kỷ niệm là một câu chuyện đẹp</p>
+            </div>
+            <div class="memories-grid">
+                <div class="memory-card" data-aos="zoom-in">
+                    <div class="memory-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Sinh Nhật Đầu Tiên</h3>
+                    <p>Ngày con tròn 1 tuổi, cả gia đình cùng nhau ăn mừng và chúc phúc cho con.</p>
+                    <div class="memory-date">12/12/2023</div>
+                </div>
+
+                <div class="memory-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="memory-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Ngày Đầu Đi Học</h3>
+                    <p>Con bắt đầu hành trình học tập, mở ra một thế giới mới đầy thú vị.</p>
+                    <div class="memory-date">01/09/2023</div>
+                </div>
+
+                <div class="memory-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="memory-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Chuyến Du Lịch Đầu Tiên</h3>
+                    <p>Lần đầu con được đi du lịch xa, khám phá những vùng đất mới.</p>
+                    <div class="memory-date">15/07/2023</div>
+                </div>
+
+                <div class="memory-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="memory-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Tiếng Hát Đầu Tiên</h3>
+                    <p>Con bắt đầu biết hát, giọng hát ngọng nghịu đáng yêu.</p>
+                    <div class="memory-date">20/05/2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Về Con Yêu</h2>
+                    <p>Con là món quà quý giá nhất mà cuộc sống ban tặng cho gia đình. Mỗi ngày trôi qua, con đều mang đến những niềm vui mới, những tiếng cười trong trẻo và những khoảnh khắc đáng nhớ.</p>
+                    <p>Con đang lớn lên từng ngày, học hỏi và khám phá thế giới xung quanh với sự tò mò vô tận. Mỗi bước đi, mỗi từ nói đầu tiên, mỗi nụ cười đều là những kỷ niệm quý giá mà bố mẹ sẽ trân trọng mãi mãi.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Tuổi</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Khoảnh Khắc</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Tình Yêu</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-stack">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=400&fit=crop" alt="Con yêu 1" class="stacked-image">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=400&fit=crop" alt="Con yêu 2" class="stacked-image">
+                        <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=300&h=400&fit=crop" alt="Con yêu 3" class="stacked-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Album Kỷ Niệm</h3>
+                    <p>Lưu giữ những khoảnh khắc đáng nhớ và kỷ niệm đẹp về con yêu</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên Kết</h4>
+                    <ul>
+                        <li><a href="#home">Trang Chủ</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#gallery">Thư Viện</a></li>
+                        <li><a href="#memories">Kỷ Niệm</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Thông Tin</h4>
+                    <p><i class="fas fa-heart"></i> Được tạo với tình yêu</p>
+                    <p><i class="fas fa-calendar"></i> Cập nhật hàng ngày</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Album Kỷ Niệm. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
