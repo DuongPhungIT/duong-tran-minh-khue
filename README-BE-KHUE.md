@@ -9,50 +9,49 @@
 
 ---
 
-## 🎀 **Câu Chuyện Đáng Yêu**
+## 🎀 **Hành Trình Thôi Nôi Của Bé Khuê**
 
 ### **🌸 Chào Đời (11-09-2024)**
 Vào một ngày đẹp trời tháng 9, bé gái Dương Trần Minh Khuê đã cất tiếng khóc đầu tiên, mang đến niềm hạnh phúc vô bờ cho ba Dương Anh Phụng và mẹ Trần Thị Thu Nhiên. Đây là khoảnh khắc thiêng liêng nhất, khi cả gia đình được đón nhận món quà quý giá nhất từ thiên đường.
 
-### **🌟 Nụ Cười Đầu Tiên**
-Bé Khuê bắt đầu biết cười, nụ cười trong sáng và hồn nhiên như những cánh hoa mùa xuân, làm cho ba mẹ và cả gia đình hạnh phúc vô bờ. Mỗi nụ cười của bé là một món quà quý giá, mang đến niềm vui cho mọi người xung quanh.
+### **🎉 Đầy Tháng (11-10-2024)**
+Tròn 1 tháng tuổi, bé Khuê đã có lễ đầy tháng đầu tiên trong đời. Cả gia đình cùng nhau tổ chức lễ cúng tạ ơn tổ tiên, ông bà và cầu chúc cho bé được khỏe mạnh, thông minh. Bé Khuê mặc bộ quần áo đẹp, được mọi người yêu thương và chúc phúc.
 
-### **🦋 Khám Phá Thế Giới**
-Bé Khuê bắt đầu biết bò, khám phá mọi ngóc ngách trong nhà với sự tò mò và thích thú như một nhà thám hiểm nhỏ. Mỗi bước bò của bé là một cuộc phiêu lưu mới, mở ra những khám phá thú vị về thế giới xung quanh.
+### **🌟 Các Hoạt Động Đầu Tiên**
+Bé Khuê bắt đầu có những hoạt động đầu tiên trong đời: nụ cười đầu tiên, tiếng cười khúc khích, biết nhìn theo mọi người, biết cầm nắm đồ vật, và bắt đầu biết bò. Mỗi hoạt động mới đều làm cho ba mẹ vô cùng hạnh phúc và tự hào.
 
-### **👑 Bước Đi Đầu Tiên**
-Bé Khuê đứng lên và bước những bước đi đầu tiên, mở ra một chương mới trong cuộc đời. Mỗi bước đi của công chúa nhỏ là một bước tiến quan trọng, đánh dấu sự trưởng thành và khả năng độc lập của bé.
+### **🎂 Thôi Nôi (11-09-2025)**
+Tròn 1 tuổi, bé Khuê được tổ chức lễ thôi nôi - một nghi lễ truyền thống quan trọng trong văn hóa Việt Nam. Cả gia đình cùng nhau chuẩn bị mâm cúng với đầy đủ các vật phẩm truyền thống và đặc biệt là mâm đồ chơi để bé "chọn nghề".
 
 ---
 
-## 🎠 **Các Danh Mục Ảnh Dễ Thương**
+## 🎠 **Các Danh Mục Ảnh Thôi Nôi**
+
+### **👶 Chào Đời**
+- Khoảnh khắc thiêng liêng khi bé cất tiếng khóc đầu tiên
+- Lần đầu gặp ba mẹ
+- Những giây phút đầu tiên trong đời
+
+### **🎉 Đầy Tháng**
+- Lễ đầy tháng đầu tiên
+- Bé mặc quần áo đẹp
+- Cả gia đình sum vầy chúc phúc
+
+### **⭐ Hoạt Động**
+- Nụ cười đầu tiên
+- Biết cầm nắm đồ vật
+- Bắt đầu biết bò
+- Khám phá thế giới
+
+### **🎂 Thôi Nôi**
+- Lễ thôi nôi tròn 1 tuổi
+- Mâm đồ chơi để "chọn nghề"
+- Nghi lễ truyền thống Việt Nam
 
 ### **👨‍👩‍👧 Gia Đình**
 - Khoảnh khắc sum vầy bên nhau
 - Bữa cơm gia đình ấm cúng
 - Chơi cùng ba mẹ
-- Đi dạo công viên
-
-### **🎠 Vui Chơi**
-- Giờ chơi thú vị
-- Khám phá thế giới
-- Chơi với đồ chơi
-- Vẽ tranh sáng tạo
-- Đọc sách khám phá
-
-### **⭐ Cột Mốc**
-- Những bước tiến đáng tự hào
-- Thành công nhỏ bé
-- Học đi từng bước
-- Nói từ đầu tiên
-
-### **🎂 Sinh Nhật**
-- Sinh nhật lần 1 (11-09-2025)
-- Sinh nhật lần 2 (11-09-2026)
-
-### **✈️ Du Lịch**
-- Chuyến du lịch đầu tiên
-- Khám phá biển xanh
 
 ---
 

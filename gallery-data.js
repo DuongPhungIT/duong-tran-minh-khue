@@ -3,11 +3,117 @@
 // Dành riêng cho bé gái Dương Trần Minh Khuê
 // ========================================
 
-// Cấu trúc dữ liệu ảnh cho từng danh mục
+// Cấu trúc dữ liệu ảnh cho từng danh mục thôi nôi
 const galleryData = {
     // Danh mục: Tất cả ảnh
     all: [
         // Ảnh sẽ được tự động thêm từ tất cả các danh mục
+    ],
+
+    // Danh mục: Chào Đời
+    birth: [
+        {
+            id: "birth_001",
+            src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop",
+            alt: "Bé Khuê chào đời",
+            title: "🌸 Chào Đời 🌸",
+            description: "Khoảnh khắc thiêng liêng khi bé Khuê cất tiếng khóc đầu tiên",
+            icon: "fas fa-baby",
+            date: "2024-09-11",
+            category: "birth"
+        },
+        {
+            id: "birth_002",
+            src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop",
+            alt: "Bé Khuê lần đầu gặp ba mẹ",
+            title: "👨‍👩‍👧 Lần Đầu Gặp Ba Mẹ",
+            description: "Khoảnh khắc xúc động khi bé Khuê lần đầu được ba mẹ ôm vào lòng",
+            icon: "fas fa-heart",
+            date: "2024-09-11",
+            category: "birth"
+        }
+    ],
+
+    // Danh mục: Đầy Tháng
+    monthly: [
+        {
+            id: "monthly_001",
+            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
+            alt: "Lễ đầy tháng của bé Khuê",
+            title: "🎉 Lễ Đầy Tháng 🎉",
+            description: "Bé Khuê tròn 1 tháng tuổi, được tổ chức lễ đầy tháng đầu tiên",
+            icon: "fas fa-calendar-check",
+            date: "2024-10-11",
+            category: "monthly"
+        },
+        {
+            id: "monthly_002",
+            src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop",
+            alt: "Bé Khuê mặc quần áo đẹp",
+            title: "👗 Quần Áo Đẹp",
+            description: "Bé Khuê mặc bộ quần áo đẹp nhất trong lễ đầy tháng",
+            icon: "fas fa-tshirt",
+            date: "2024-10-11",
+            category: "monthly"
+        }
+    ],
+
+    // Danh mục: Hoạt Động
+    activities: [
+        {
+            id: "activities_001",
+            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
+            alt: "Nụ cười đầu tiên của bé Khuê",
+            title: "🌟 Nụ Cười Đầu Tiên",
+            description: "Bé Khuê bắt đầu biết cười, nụ cười trong sáng và hồn nhiên",
+            icon: "fas fa-smile",
+            date: "2024-10-15",
+            category: "activities"
+        },
+        {
+            id: "activities_002",
+            src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop",
+            alt: "Bé Khuê biết cầm nắm",
+            title: "🤲 Biết Cầm Nắm",
+            description: "Bé Khuê bắt đầu biết cầm nắm đồ vật, khám phá thế giới",
+            icon: "fas fa-hand-paper",
+            date: "2024-11-01",
+            category: "activities"
+        },
+        {
+            id: "activities_003",
+            src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop",
+            alt: "Bé Khuê biết bò",
+            title: "🦋 Biết Bò",
+            description: "Bé Khuê bắt đầu biết bò, khám phá mọi ngóc ngách trong nhà",
+            icon: "fas fa-crawling",
+            date: "2024-12-01",
+            category: "activities"
+        }
+    ],
+
+    // Danh mục: Thôi Nôi
+    "thoi-noi": [
+        {
+            id: "thoi-noi_001",
+            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
+            alt: "Lễ thôi nôi của bé Khuê",
+            title: "🎂 Lễ Thôi Nôi 🎂",
+            description: "Bé Khuê tròn 1 tuổi, được tổ chức lễ thôi nôi truyền thống",
+            icon: "fas fa-birthday-cake",
+            date: "2025-09-11",
+            category: "thoi-noi"
+        },
+        {
+            id: "thoi-noi_002",
+            src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop",
+            alt: "Mâm đồ chơi thôi nôi",
+            title: "🎁 Mâm Đồ Chơi",
+            description: "Mâm đồ chơi để bé Khuê 'chọn nghề' trong lễ thôi nôi",
+            icon: "fas fa-gift",
+            date: "2025-09-11",
+            category: "thoi-noi"
+        }
     ],
 
     // Danh mục: Gia Đình
