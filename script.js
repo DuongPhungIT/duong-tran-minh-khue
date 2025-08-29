@@ -11,9 +11,35 @@ const galleryItems = document.querySelectorAll('.gallery-item');
 const statNumbers = document.querySelectorAll('.stat-number');
 
 // Mobile Navigation Toggle
-hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Hamburger clicked!'); // Debug log
+    
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    
+    // Toggle body scroll
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Add touch support for mobile
+hamburger.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    console.log('Hamburger touched!'); // Debug log
+    
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
 });
 
 // Close mobile menu when clicking on a link
@@ -21,7 +47,26 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
     });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Close mobile menu on window resize
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
 });
 
 // Navbar scroll effect
@@ -92,6 +137,65 @@ document.querySelectorAll('[data-aos], .hero-stats').forEach(el => {
     observer.observe(el);
 });
 
+// Gallery rendering functions
+function renderGallery(category = 'all') {
+    const galleryGrid = document.getElementById('gallery-grid');
+    const images = getImagesByCategory(category);
+    
+    galleryGrid.innerHTML = '';
+    
+    images.forEach(image => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.setAttribute('data-category', image.category);
+        galleryItem.setAttribute('data-id', image.id);
+        
+        galleryItem.innerHTML = `
+            <img src="${image.src}" alt="${image.alt}" loading="lazy">
+            <div class="gallery-overlay">
+                <h3>${image.title}</h3>
+                <p>${image.description}</p>
+                <i class="${image.icon}"></i>
+            </div>
+        `;
+        
+        // Add click event for lightbox
+        galleryItem.addEventListener('click', () => {
+            openLightbox(image);
+        });
+        
+        galleryGrid.appendChild(galleryItem);
+    });
+    
+    // Update gallery items reference
+    updateGalleryItemsReference();
+}
+
+function openLightbox(image) {
+    lightboxImg.src = image.src;
+    lightboxImg.alt = image.alt;
+    lightboxCaption.innerHTML = `<h3>${image.title}</h3><p>${image.description}</p>`;
+    
+    lightbox.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function updateGalleryItemsReference() {
+    // Update global galleryItems reference
+    window.galleryItems = document.querySelectorAll('.gallery-item');
+}
+
+function updateGalleryStats() {
+    const stats = getImageStats();
+    
+    document.getElementById('total-images').textContent = stats.total;
+    document.getElementById('family-count').textContent = stats.family || 0;
+    document.getElementById('play-count').textContent = stats.play || 0;
+    document.getElementById('milestone-count').textContent = stats.milestone || 0;
+    document.getElementById('birthday-count').textContent = stats.birthday || 0;
+    document.getElementById('travel-count').textContent = stats.travel || 0;
+}
+
 // Gallery filtering
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -101,17 +205,7 @@ filterBtns.forEach(btn => {
         btn.classList.add('active');
         
         const filter = btn.getAttribute('data-filter');
-        
-        galleryItems.forEach(item => {
-            const category = item.getAttribute('data-category');
-            
-            if (filter === 'all' || category === filter) {
-                item.style.display = 'block';
-                item.style.animation = 'fadeIn 0.5s ease-in-out';
-            } else {
-                item.style.display = 'none';
-            }
-        });
+        renderGallery(filter);
     });
 });
 
@@ -369,6 +463,13 @@ document.addEventListener('DOMContentLoaded', () => {
         firstSection.style.opacity = '1';
         firstSection.style.transform = 'translateY(0)';
     }
+    
+    // Initialize gallery
+    renderGallery('all');
+    updateGalleryStats();
+    
+    // Log gallery information
+    console.log('🖼️ Gallery đã được khởi tạo với', getImageStats().total, 'ảnh');
 });
 
 // Add scroll progress indicator
@@ -545,5 +646,7 @@ function addImageLoadingAnimation() {
 // Initialize image loading
 addImageLoadingAnimation();
 
-console.log('🎉 Album Kỷ Niệm đã được khởi tạo thành công!');
-console.log('💝 Chúc mừng bạn có một album đẹp để lưu giữ những kỷ niệm quý giá!');
+console.log('🌸 Album Bé Khuê đã được khởi tạo thành công! 🌸');
+console.log('💖 Chúc mừng ba Dương Anh Phụng và mẹ Trần Thị Thu Nhiên có một album đẹp để lưu giữ những kỷ niệm quý giá của bé gái Dương Trần Minh Khuê! 💖');
+console.log('🎀 Sinh nhật: 11-09-2024 🎀');
+console.log('🌟 Chúc bé Khuê luôn xinh đẹp, thông minh và hạnh phúc! 🌟');
