@@ -35,11 +35,20 @@ Một dự án album đẹp mắt và sinh động để lưu giữ những kho�
 ## 📁 Cấu Trúc Dự Án
 
 ```
-album-ky-niem/
-├── index.html          # Trang chính
-├── styles.css          # File CSS chính
-├── script.js           # File JavaScript
-└── README.md           # Hướng dẫn sử dụng
+duong-tran-minh-khue/
+├── index.html              # Trang chính
+├── styles.css              # File CSS chính
+├── assets/                 # Thư mục tài nguyên
+│   ├── js/                # JavaScript files
+│   │   ├── script.js      # Logic chính
+│   │   └── gallery-data.js # Dữ liệu gallery
+│   └── images/            # Hình ảnh
+│       ├── birth/         # Ảnh chào đời
+│       ├── monthly/       # Ảnh đầy tháng
+│       ├── activities/    # Ảnh hoạt động
+│       ├── thoi-noi/      # Ảnh thôi nôi
+│       └── family/        # Ảnh gia đình
+└── README.md              # Hướng dẫn sử dụng
 ```
 
 ## 🚀 Cách Sử Dụng
