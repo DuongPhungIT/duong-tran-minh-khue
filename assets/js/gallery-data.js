@@ -14,7 +14,7 @@ const galleryData = {
     birth: [
         {
             id: "birth_001",
-            src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop",
+            src: "assets/thumbs/birth/IMG_7285.JPG",
             alt: "Bé Khuê chào đời",
             title: "🌸 Chào Đời 🌸",
             description: "Khoảnh khắc thiêng liêng khi bé Khuê cất tiếng khóc đầu tiên",
@@ -22,37 +22,27 @@ const galleryData = {
             date: "2024-09-11",
             category: "birth"
         },
-        {
-            id: "birth_002",
-            src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop",
-            alt: "Bé Khuê lần đầu gặp ba mẹ",
-            title: "👨‍👩‍👧 Lần Đầu Gặp Ba Mẹ",
-            description: "Khoảnh khắc xúc động khi bé Khuê lần đầu được ba mẹ ôm vào lòng",
-            icon: "fas fa-heart",
-            date: "2024-09-11",
-            category: "birth"
-        }
+        { id: "birth_IMG_7344", src: "assets/images/birth/IMG_7344.JPG", alt: "IMG_7344", title: "Chào Đời - Khoảnh Khắc", description: "Ảnh chào đời", icon: "fas fa-baby", date: "2024-09-11", category: "birth" },
+        { id: "birth_IMG_7343", src: "assets/images/birth/IMG_7343.JPG", alt: "IMG_7343", title: "Chào Đời - Khoảnh Khắc", description: "Ảnh chào đời", icon: "fas fa-baby", date: "2024-09-11", category: "birth" },
+        { id: "birth_IMG_7340", src: "assets/images/birth/IMG_7340.JPG", alt: "IMG_7340", title: "Chào Đời - Khoảnh Khắc", description: "Ảnh chào đời", icon: "fas fa-baby", date: "2024-09-11", category: "birth" },
+        { id: "birth_IMG_7338", src: "assets/images/birth/IMG_7338.JPG", alt: "IMG_7338", title: "Chào Đời - Khoảnh Khắc", description: "Ảnh chào đời", icon: "fas fa-baby", date: "2024-09-11", category: "birth" },
+        { id: "birth_IMG_7335", src: "assets/images/birth/IMG_7335.JPG", alt: "IMG_7335", title: "Chào Đời - Khoảnh Khắc", description: "Ảnh chào đời", icon: "fas fa-baby", date: "2024-09-11", category: "birth" },
+        { id: "birth_IMG_7331", src: "assets/images/birth/IMG_7331.JPG", alt: "IMG_7331", title: "Chào Đời - Khoảnh Khắc", description: "Ảnh chào đời", icon: "fas fa-baby", date: "2024-09-11", category: "birth" },
+       { id: "birth_IMG_7254", src: "assets/images/birth/IMG_7254.JPG", alt: "IMG_7254", title: "Chào Đời - Khoảnh Khắc", description: "Ảnh chào đời", icon: "fas fa-baby", date: "2024-09-11", category: "birth" },
+        { id: "birth_IMG_7253", src: "assets/images/birth/IMG_7253.JPG", alt: "IMG_7253", title: "Chào Đời - Khoảnh Khắc", description: "Ảnh chào đời", icon: "fas fa-baby", date: "2024-09-11", category: "birth" },
+        { id: "birth_IMG_7249", src: "assets/images/birth/IMG_7249.JPG", alt: "IMG_7249", title: "Chào Đời - Khoảnh Khắc", description: "Ảnh chào đời", icon: "fas fa-baby", date: "2024-09-11", category: "birth" },
+        { id: "birth_IMG_7245", src: "assets/images/birth/IMG_7245.JPG", alt: "IMG_7245", title: "Chào Đời - Khoảnh Khắc", description: "Ảnh chào đời", icon: "fas fa-baby", date: "2024-09-11", category: "birth" }
     ],
 
     // Danh mục: Đầy Tháng
     monthly: [
         {
             id: "monthly_001",
-            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
+            src: "assets/images/monthly/beauty_1728613156659.JPG",
             alt: "Lễ đầy tháng của bé Khuê",
             title: "🎉 Lễ Đầy Tháng 🎉",
             description: "Bé Khuê tròn 1 tháng tuổi, được tổ chức lễ đầy tháng đầu tiên",
             icon: "fas fa-calendar-check",
-            date: "2024-10-11",
-            category: "monthly"
-        },
-        {
-            id: "monthly_002",
-            src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop",
-            alt: "Bé Khuê mặc quần áo đẹp",
-            title: "👗 Quần Áo Đẹp",
-            description: "Bé Khuê mặc bộ quần áo đẹp nhất trong lễ đầy tháng",
-            icon: "fas fa-tshirt",
             date: "2024-10-11",
             category: "monthly"
         },
@@ -119,61 +109,10 @@ const galleryData = {
     ],
 
     // Danh mục: Hoạt Động
-    activities: [
-        {
-            id: "activities_001",
-            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
-            alt: "Nụ cười đầu tiên của bé Khuê",
-            title: "🌟 Nụ Cười Đầu Tiên",
-            description: "Bé Khuê bắt đầu biết cười, nụ cười trong sáng và hồn nhiên",
-            icon: "fas fa-smile",
-            date: "2024-10-15",
-            category: "activities"
-        },
-        {
-            id: "activities_002",
-            src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop",
-            alt: "Bé Khuê biết cầm nắm",
-            title: "🤲 Biết Cầm Nắm",
-            description: "Bé Khuê bắt đầu biết cầm nắm đồ vật, khám phá thế giới",
-            icon: "fas fa-hand-paper",
-            date: "2024-11-01",
-            category: "activities"
-        },
-        {
-            id: "activities_003",
-            src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop",
-            alt: "Bé Khuê biết bò",
-            title: "🦋 Biết Bò",
-            description: "Bé Khuê bắt đầu biết bò, khám phá mọi ngóc ngách trong nhà",
-            icon: "fas fa-crawling",
-            date: "2024-12-01",
-            category: "activities"
-        }
-    ],
+  
 
     // Danh mục: Thôi Nôi
     "thoi-noi": [
-        {
-            id: "thoi-noi_001",
-            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
-            alt: "Lễ thôi nôi của bé Khuê",
-            title: "🎂 Lễ Thôi Nôi 🎂",
-            description: "Bé Khuê tròn 1 tuổi, được tổ chức lễ thôi nôi truyền thống",
-            icon: "fas fa-birthday-cake",
-            date: "2025-09-11",
-            category: "thoi-noi"
-        },
-        {
-            id: "thoi-noi_002",
-            src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=300&fit=crop",
-            alt: "Mâm đồ chơi thôi nôi",
-            title: "🎁 Mâm Đồ Chơi",
-            description: "Mâm đồ chơi để bé Khuê 'chọn nghề' trong lễ thôi nôi",
-            icon: "fas fa-gift",
-            date: "2025-09-11",
-            category: "thoi-noi"
-        },
         { id: "thoi-noi_VDAL9530", src: "assets/images/thoi-noi/VDAL9530.JPG", alt: "VDAL9530", title: "Thôi Nôi - Khoảnh Khắc", description: "Ảnh thôi nôi", icon: "fas fa-birthday-cake", date: "2025-09-11", category: "thoi-noi" },
         { id: "thoi-noi_VDAL9522", src: "assets/images/thoi-noi/VDAL9522.JPG", alt: "VDAL9522", title: "Thôi Nôi - Khoảnh Khắc", description: "Ảnh thôi nôi", icon: "fas fa-birthday-cake", date: "2025-09-11", category: "thoi-noi" },
         { id: "thoi-noi_VDAL9502", src: "assets/images/thoi-noi/VDAL9502.JPG", alt: "VDAL9502", title: "Thôi Nôi - Khoảnh Khắc", description: "Ảnh thôi nôi", icon: "fas fa-birthday-cake", date: "2025-09-11", category: "thoi-noi" },
@@ -208,168 +147,6 @@ const galleryData = {
         { id: "thoi-noi_SAMM7307", src: "assets/images/thoi-noi/SAMM7307.JPG", alt: "SAMM7307", title: "Thôi Nôi - Khoảnh Khắc", description: "Ảnh thôi nôi", icon: "fas fa-birthday-cake", date: "2025-09-11", category: "thoi-noi" },
         { id: "thoi-noi_SAMM7300", src: "assets/images/thoi-noi/SAMM7300.JPG", alt: "SAMM7300", title: "Thôi Nôi - Khoảnh Khắc", description: "Ảnh thôi nôi", icon: "fas fa-birthday-cake", date: "2025-09-11", category: "thoi-noi" }
     ],
-
-    // Danh mục: Gia Đình
-    family: [
-        { id: "family_IMG_8444", src: "assets/images/family/IMG_8444.JPG", alt: "IMG_8444", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" },
-        { id: "family_IMG_8445", src: "assets/images/family/IMG_8445.JPG", alt: "IMG_8445", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" },
-        { id: "family_IMG_8448", src: "assets/images/family/IMG_8448.JPG", alt: "IMG_8448", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" },
-        { id: "family_IMG_8450", src: "assets/images/family/IMG_8450.JPG", alt: "IMG_8450", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" },
-        { id: "family_IMG_8089", src: "assets/images/family/IMG_8089.JPG", alt: "IMG_8089", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" },
-        { id: "family_IMG_7886", src: "assets/images/family/IMG_7886.JPG", alt: "IMG_7886", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" },
-        { id: "family_IMG_7883", src: "assets/images/family/IMG_7883.JPG", alt: "IMG_7883", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" },
-        { id: "family_IMG_7882", src: "assets/images/family/IMG_7882.JPG", alt: "IMG_7882", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" },
-        { id: "family_IMG_7881", src: "assets/images/family/IMG_7881.JPG", alt: "IMG_7881", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" },
-        { id: "family_IMG_7777", src: "assets/images/family/IMG_7777.JPG", alt: "IMG_7777", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" },
-        { id: "family_IMG_7775", src: "assets/images/family/IMG_7775.JPG", alt: "IMG_7775", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" },
-        { id: "family_IMG_7695", src: "assets/images/family/IMG_7695.JPG", alt: "IMG_7695", title: "Gia Đình - Khoảnh Khắc", description: "Ảnh gia đình", icon: "fas fa-heart", date: "2024-09-11", category: "family" }
-    ],
-
-    // Danh mục: Vui Chơi
-    play: [
-        {
-            id: "play_001",
-            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
-            alt: "Giờ chơi",
-            title: "Giờ Chơi",
-            description: "Niềm vui trong từng hoạt động",
-            icon: "fas fa-gamepad",
-            date: "2024-01-16",
-            category: "play"
-        },
-        {
-            id: "play_002",
-            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
-            alt: "Khám phá",
-            title: "Khám Phá",
-            description: "Thế giới qua đôi mắt con",
-            icon: "fas fa-search",
-            date: "2024-01-18",
-            category: "play"
-        },
-        {
-            id: "play_003",
-            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
-            alt: "Chơi với đồ chơi",
-            title: "Chơi Với Đồ Chơi",
-            description: "Sáng tạo và học hỏi qua đồ chơi",
-            icon: "fas fa-puzzle-piece",
-            date: "2024-01-22",
-            category: "play"
-        },
-        {
-            id: "play_004",
-            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
-            alt: "Vẽ tranh",
-            title: "Vẽ Tranh",
-            description: "Thể hiện trí tưởng tượng qua màu sắc",
-            icon: "fas fa-palette",
-            date: "2024-01-28",
-            category: "play"
-        },
-        {
-            id: "play_005",
-            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
-            alt: "Đọc sách",
-            title: "Đọc Sách",
-            description: "Khám phá thế giới qua những trang sách",
-            icon: "fas fa-book",
-            date: "2024-02-05",
-            category: "play"
-        }
-    ],
-
-    // Danh mục: Cột Mốc
-    milestone: [
-        {
-            id: "milestone_001",
-            src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop",
-            alt: "Cột mốc quan trọng",
-            title: "Cột Mốc Quan Trọng",
-            description: "Những bước tiến đáng tự hào",
-            icon: "fas fa-star",
-            date: "2024-01-17",
-            category: "milestone"
-        },
-        {
-            id: "milestone_002",
-            src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop",
-            alt: "Thành tựu",
-            title: "Thành Tựu",
-            description: "Những thành công nhỏ bé",
-            icon: "fas fa-trophy",
-            date: "2024-01-19",
-            category: "milestone"
-        },
-        {
-            id: "milestone_003",
-            src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop",
-            alt: "Học đi",
-            title: "Học Đi",
-            description: "Bước đi đầu tiên của con",
-            icon: "fas fa-walking",
-            date: "2024-01-24",
-            category: "milestone"
-        },
-        {
-            id: "milestone_004",
-            src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop",
-            alt: "Nói từ đầu tiên",
-            title: "Nói Từ Đầu Tiên",
-            description: "Tiếng nói đầu tiên của con",
-            icon: "fas fa-comment",
-            date: "2024-01-30",
-            category: "milestone"
-        }
-    ],
-
-    // Danh mục: Sinh Nhật
-    birthday: [
-        {
-            id: "birthday_001",
-            src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop",
-            alt: "Sinh nhật lần 1",
-            title: "Sinh Nhật Lần 1",
-            description: "Ngày con tròn 1 tuổi",
-            icon: "fas fa-birthday-cake",
-            date: "2024-01-10",
-            category: "birthday"
-        },
-        {
-            id: "birthday_002",
-            src: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=300&fit=crop",
-            alt: "Sinh nhật lần 2",
-            title: "Sinh Nhật Lần 2",
-            description: "Ngày con tròn 2 tuổi",
-            icon: "fas fa-birthday-cake",
-            date: "2024-01-10",
-            category: "birthday"
-        }
-    ],
-
-    // Danh mục: Du Lịch
-    travel: [
-        {
-            id: "travel_001",
-            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
-            alt: "Chuyến du lịch đầu tiên",
-            title: "Chuyến Du Lịch Đầu Tiên",
-            description: "Khám phá thế giới bên ngoài",
-            icon: "fas fa-plane",
-            date: "2024-01-12",
-            category: "travel"
-        },
-        {
-            id: "travel_002",
-            src: "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop",
-            alt: "Đi biển",
-            title: "Đi Biển",
-            description: "Lần đầu con được nhìn thấy biển",
-            icon: "fas fa-water",
-            date: "2024-01-14",
-            category: "travel"
-        }
-    ]
 };
 
 // Hàm tạo danh sách tất cả ảnh

@@ -663,6 +663,12 @@ function addImageLoadingAnimation() {
         img.addEventListener('load', onLoaded, { once: true });
         
         img.addEventListener('error', () => {
+            // Fallback: if thumbnail missing, swap to full-size image once
+            const fullSrc = img.getAttribute('data-full-src');
+            if (fullSrc && img.src !== fullSrc) {
+                img.src = fullSrc;
+                return;
+            }
             // Show the image area without forcing grayscale; log for debugging
             img.style.opacity = '1';
             img.style.filter = 'none';
