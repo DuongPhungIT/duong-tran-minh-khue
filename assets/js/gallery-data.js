@@ -105,7 +105,22 @@ const galleryData = {
             icon: "fas fa-image",
             date: "2024-10-11",
             category: "monthly"
-        }
+        },
+        { id: "monthly_IMG_8289", src: "assets/images/monthly/IMG_8289.JPG", alt: "IMG_8289", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_8343", src: "assets/images/monthly/IMG_8343.JPG", alt: "IMG_8343", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_8332", src: "assets/images/monthly/IMG_8332.JPG", alt: "IMG_8332", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_8450", src: "assets/images/monthly/IMG_8450.JPG", alt: "IMG_8450", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_8448", src: "assets/images/monthly/IMG_8448.JPG", alt: "IMG_8448", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_8445", src: "assets/images/monthly/IMG_8445.JPG", alt: "IMG_8445", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_8444", src: "assets/images/monthly/IMG_8444.JPG", alt: "IMG_8444", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_8089", src: "assets/images/monthly/IMG_8089.JPG", alt: "IMG_8089", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_7886", src: "assets/images/monthly/IMG_7886.JPG", alt: "IMG_7886", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_7883", src: "assets/images/monthly/IMG_7883.JPG", alt: "IMG_7883", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_7882", src: "assets/images/monthly/IMG_7882.JPG", alt: "IMG_7882", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_7881", src: "assets/images/monthly/IMG_7881.JPG", alt: "IMG_7881", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_7777", src: "assets/images/monthly/IMG_7777.JPG", alt: "IMG_7777", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_7775", src: "assets/images/monthly/IMG_7775.JPG", alt: "IMG_7775", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" },
+        { id: "monthly_IMG_7695", src: "assets/images/monthly/IMG_7695.JPG", alt: "IMG_7695", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" }
     ],
 
     // Danh mục: Hoạt Động
