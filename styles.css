@@ -6,7 +6,8 @@
 }
 
 /* Ensure no horizontal overflow globally */
-html, body {
+html,
+body {
     overflow-x: hidden;
     width: 100%;
     max-width: 100vw;
@@ -41,7 +42,7 @@ html {
         -webkit-overflow-scrolling: touch;
         overflow-x: hidden;
     }
-    
+
     body {
         -webkit-overflow-scrolling: touch;
         overscroll-behavior: contain;
@@ -49,26 +50,26 @@ html {
         width: 100%;
         max-width: 100vw;
     }
-    
+
     /* Disable momentum scrolling on Android */
     body.scrolling {
         -webkit-overflow-scrolling: auto;
     }
-    
+
     /* Prevent horizontal overflow on all elements */
     * {
         max-width: 100%;
         box-sizing: border-box;
     }
-    
+
     /* Ensure all sections don't overflow */
     section {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
     }
-    
-    
+
+
     /* Fix container overflow and expand for mobile */
     .container {
         width: 100%;
@@ -76,45 +77,51 @@ html {
         overflow-x: hidden;
         padding: 0 10px;
     }
-    
+
     /* Timeline section specific mobile optimization */
+    .timeline-section {
+        background: linear-gradient(135deg, rgba(249, 245, 240, 0.8) 0%, rgba(242, 237, 228, 0.9) 100%),
+            url('assets/images/common/minhkhue3.jpg') center/cover no-repeat;
+        background-attachment: scroll;
+    }
+
     .timeline-section .container {
         padding: 0 5px;
     }
-    
+
     /* Fix gallery grid overflow */
     .gallery-grid {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
     }
-    
+
     /* Fix navbar overflow */
     .navbar {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
     }
-    
+
     .nav-container {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
     }
-    
+
     /* Fix timeline layout for mobile - left side with justified text */
     .timeline {
         padding-left: 0;
         margin-left: 0;
     }
-    
+
     .timeline-content {
         margin-left: 0;
         width: calc(100% - 50px);
         padding: 1.5rem;
         text-align: justify;
     }
-    
+
     .timeline-content p {
         text-align: justify !important;
         text-justify: inter-word;
@@ -122,15 +129,15 @@ html {
         word-spacing: normal;
         line-height: 1.6;
     }
-    
+
     .timeline-content h3 {
         text-align: left;
     }
-    
+
     .timeline-date {
         text-align: left;
     }
-    
+
     /* Ensure timeline marker is visible on left side */
     .timeline-marker {
         position: absolute;
@@ -149,7 +156,7 @@ html {
         font-size: 1.2rem;
         box-shadow: var(--shadow-medium);
     }
-    
+
     .timeline-marker img {
         width: 30px;
         height: 30px;
@@ -175,15 +182,28 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
 
-h1 { font-size: 3.5rem; }
-h2 { font-size: 2.5rem; }
-h3 { font-size: 1.8rem; }
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
 
 p {
     margin-bottom: 1rem;
@@ -324,21 +344,11 @@ p {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--bg-accent) 0%, var(--bg-primary) 100%);
+    background: linear-gradient(135deg, rgba(242, 237, 228, 0.4) 0%, rgba(254, 252, 248, 0.5) 100%),
+        url('assets/images/common/minhkhue2.jpg') center/cover no-repeat;
     padding-top: 80px;
     position: relative;
     overflow: hidden;
-}
-
-.hero::before {
-    content: '🎈 🎠 🎂 🎁';
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    font-size: 2rem;
-    animation: float 6s ease-in-out infinite reverse;
-    opacity: 0.3;
-    z-index: 0;
 }
 
 .hero::before {
@@ -348,8 +358,9 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="vintage-pattern" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="%23d4a574" opacity="0.1"/><circle cx="80" cy="80" r="1.5" fill="%23c9a96e" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="%23e8b4a0" opacity="0.1"/><circle cx="30" cy="70" r="1.5" fill="%23f4e4c1" opacity="0.1"/><circle cx="70" cy="30" r="1" fill="%23e8c5a0" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23vintage-pattern)"/></svg>');
-    opacity: 0.4;
+    background: linear-gradient(135deg, rgba(242, 237, 228, 0.2) 0%, rgba(254, 252, 248, 0.3) 50%, rgba(249, 245, 240, 0.2) 100%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .hero::after {
@@ -373,7 +384,7 @@ p {
     margin: 0 auto;
     padding: 0 20px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .hero-title {
@@ -384,10 +395,11 @@ p {
 }
 
 .highlight {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #000000, var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-family: 'Dancing Script', cursive;
 }
 
 .hero-subtitle {
@@ -471,8 +483,8 @@ p {
     animation: float 6s ease-in-out infinite;
     padding: 15px;
     border-radius: 32px;
-    background: linear-gradient(180deg, rgba(254,252,248,0.95), rgba(249,245,240,0.9));
-    box-shadow: 0 20px 50px rgba(212,165,116,0.15), var(--shadow-medium);
+    background: linear-gradient(180deg, rgba(254, 252, 248, 0.95), rgba(249, 245, 240, 0.9));
+    box-shadow: 0 20px 50px rgba(212, 165, 116, 0.15), var(--shadow-medium);
     border: 2px solid var(--vintage-gold);
 }
 
@@ -501,7 +513,7 @@ p {
 
 .hero-photo.soft-corners:hover {
     transform: scale(1.015);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
 }
 
 /* Soft corners + subtle vignette for hero photo */
@@ -516,13 +528,13 @@ p {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.15) 100%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.15) 100%);
     border-radius: inherit;
 }
 
 .soft-corners {
     -webkit-mask-image: radial-gradient(ellipse 140% 140% at 50% 50%, black 60%, transparent 100%);
-            mask-image: radial-gradient(ellipse 140% 140% at 50% 50%, black 60%, transparent 100%);
+    mask-image: radial-gradient(ellipse 140% 140% at 50% 50%, black 60%, transparent 100%);
 }
 
 .floating-card {
@@ -542,15 +554,22 @@ p {
     color: var(--text-primary);
     font-weight: 600;
     backdrop-filter: blur(12px);
-    box-shadow: 0 10px 30px rgba(212,165,116,0.2);
+    box-shadow: 0 10px 30px rgba(212, 165, 116, 0.2);
     border: 1px solid var(--vintage-gold);
     font-family: 'Dancing Script', cursive;
     font-size: 1.1rem;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 .scroll-indicator {
@@ -571,15 +590,30 @@ p {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-    40% { transform: translateX(-50%) translateY(-10px); }
-    60% { transform: translateX(-50%) translateY(-5px); }
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
 }
 
 /* Section Headers */
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
+    position: relative;
+    z-index: 2;
 }
 
 .section-header h2 {
@@ -601,13 +635,28 @@ p {
 /* Timeline Section */
 .timeline-section {
     padding: 6rem 0;
-    background: var(--bg-secondary);
+    background: linear-gradient(135deg, rgba(249, 245, 240, 0.7) 0%, rgba(242, 237, 228, 0.8) 100%),
+        url('assets/images/common/minhkhue3.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.timeline-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(249, 245, 240, 0.3) 0%, rgba(242, 237, 228, 0.4) 50%, rgba(247, 243, 233, 0.3) 100%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .timeline {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
+    z-index: 2;
 }
 
 .timeline::before {
@@ -773,7 +822,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, transparent 0%, rgba(212,165,116,0.1) 50%, transparent 100%);
+    background: linear-gradient(45deg, transparent 0%, rgba(212, 165, 116, 0.1) 50%, transparent 100%);
     opacity: 0;
     transition: var(--transition);
     z-index: 1;
@@ -830,55 +879,55 @@ p {
     opacity: 0.9;
 }
 
-    .gallery-overlay i {
-        font-size: 1.5rem;
-        color: var(--accent-color);
-    }
+.gallery-overlay i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
 
-    /* Gallery Stats */
-    .gallery-stats {
-        margin-top: 3rem;
-        padding: 2rem;
-        background: var(--bg-secondary);
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow-light);
-    }
+/* Gallery Stats */
+.gallery-stats {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
 
-    .stats-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1.5rem;
-        text-align: center;
-    }
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
 
-    .gallery-stats .stat-item {
-        padding: 1rem;
-        background: white;
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow-light);
-        transition: var(--transition);
-    }
+.gallery-stats .stat-item {
+    padding: 1rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
 
-    .gallery-stats .stat-item:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-medium);
-    }
+.gallery-stats .stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
 
-    .gallery-stats .stat-number {
-        display: block;
-        font-size: 2rem;
-        font-weight: 700;
-        color: var(--primary-color);
-        margin-bottom: 0.5rem;
-    }
+.gallery-stats .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
 
-    .gallery-stats .stat-label {
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 500;
-    }
+.gallery-stats .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
 
 /* Memories Section */
 .memories-section {
@@ -1057,9 +1106,22 @@ p {
 
 /* Footer */
 .footer {
-    background: var(--text-primary);
-    color: white;
+    background: linear-gradient(135deg, rgb(116 116 116 / 22%) 0%, rgba(139, 115, 85, 0.8) 100%), url(assets/images/common/minhkhue10.jpg) center / cover no-repeat;
+    color: #ffeed8;
     padding: 4rem 0 2rem;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(93, 78, 55, 0.4) 0%, rgba(139, 115, 85, 0.3) 50%, rgba(93, 78, 55, 0.4) 100%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .footer-content {
@@ -1067,6 +1129,8 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 3rem;
     margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
 }
 
 .footer-section h3,
@@ -1125,8 +1189,10 @@ p {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid #2d3436;
-    color: #b2bec3;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffeed8;
+    position: relative;
+    z-index: 2;
 }
 
 /* Lightbox */
@@ -1266,6 +1332,12 @@ p {
         box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
     }
 
+    .hero {
+        background: linear-gradient(135deg, rgba(242, 237, 228, 0.3) 0%, rgba(254, 252, 248, 0.4) 100%),
+            url('assets/images/common/minhkhue2.jpg') center/cover no-repeat;
+        background-attachment: scroll;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1274,6 +1346,7 @@ p {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
+        z-index: 2;
     }
 
     .hero-title {
@@ -1292,7 +1365,7 @@ p {
     .floating-card {
         padding: 8px;
         border-radius: 24px;
-        box-shadow: 0 12px 36px rgba(0,0,0,0.08);
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
         width: 100%;
         max-width: 520px;
         overflow: hidden;
@@ -1347,7 +1420,7 @@ p {
         max-width: 100%;
         overflow-x: hidden;
     }
-    
+
     /* Mobile layout cho about section - có hình ảnh */
     .about-section {
         padding: 3rem 0 !important;
@@ -1356,7 +1429,7 @@ p {
         position: relative !important;
         z-index: 10 !important;
     }
-    
+
     /* Đảm bảo about section luôn hiển thị đầy đủ trên mobile */
     .about-section::after {
         content: '';
@@ -1364,17 +1437,17 @@ p {
         height: 100px;
         width: 100%;
     }
-    
+
     .about-content {
         padding: 0 1rem !important;
     }
-    
+
     .about-text h2 {
         font-size: 1.8rem !important;
         margin-bottom: 1.5rem !important;
         text-align: center !important;
     }
-    
+
     .about-text p {
         font-size: 1rem !important;
         line-height: 1.7 !important;
@@ -1382,65 +1455,65 @@ p {
         text-align: justify !important;
         padding: 0 !important;
     }
-    
+
     .about-stats {
         margin-top: 2rem !important;
         gap: 1rem !important;
         justify-content: center !important;
     }
-    
+
     .about-stat {
         flex: 1 !important;
         min-width: 80px !important;
     }
-    
+
     .about-stat .stat-number {
         font-size: 1.6rem !important;
     }
-    
+
     .about-stat .stat-label {
         font-size: 0.8rem !important;
     }
-    
+
     /* Hiển thị image stack trên mobile với layout tối ưu */
     .about-image {
         display: block !important;
         margin-top: 2rem !important;
     }
-    
+
     .image-stack {
         height: 300px !important;
         position: relative !important;
     }
-    
+
     .stacked-image {
         width: 200px !important;
         height: 250px !important;
         object-fit: cover;
         object-position: center top;
     }
-    
+
     .stacked-image:nth-child(1) {
         top: 0 !important;
         left: 50% !important;
         transform: translateX(-50%) rotate(-5deg) !important;
         z-index: 3 !important;
     }
-    
+
     .stacked-image:nth-child(2) {
         top: 20px !important;
         left: 20% !important;
         transform: rotate(3deg) !important;
         z-index: 2 !important;
     }
-    
+
     .stacked-image:nth-child(3) {
         top: 20px !important;
         right: 20% !important;
         transform: rotate(-2deg) !important;
         z-index: 1 !important;
     }
-    
+
 
     /* Nút back-to-top trên mobile */
     button[style*="position: fixed"] {
@@ -1481,30 +1554,30 @@ p {
         justify-content: center;
         flex-wrap: nowrap;
     }
-    
+
     .hero-stats .stat-item {
         flex: 1;
         min-width: 0;
     }
-    
+
     .hero-stats .stat-number {
         font-size: 2rem;
     }
-    
+
     .hero-stats .stat-label {
         font-size: 0.8rem;
     }
-    
+
     /* Ensure stats fit on very small screens */
     @media (max-width: 360px) {
         .hero-stats {
             gap: 0.5rem;
         }
-        
+
         .hero-stats .stat-number {
             font-size: 1.8rem;
         }
-        
+
         .hero-stats .stat-label {
             font-size: 0.7rem;
         }
@@ -1513,6 +1586,12 @@ p {
     .floating-card {
         padding: 6px;
         border-radius: 20px;
+    }
+
+    .hero {
+        background: linear-gradient(135deg, rgba(242, 237, 228, 0.25) 0%, rgba(254, 252, 248, 0.35) 100%),
+            url('assets/images/common/minhkhue2.jpg') center/cover no-repeat;
+        background-attachment: scroll;
     }
 
     .hero-photo {
@@ -1533,12 +1612,24 @@ p {
         font-size: 2rem;
     }
 
+    .timeline-section {
+        background: linear-gradient(135deg, rgba(249, 245, 240, 0.85) 0%, rgba(242, 237, 228, 0.95) 100%),
+            url('assets/images/common/minhkhue3.jpg') center/cover no-repeat;
+        background-attachment: scroll;
+    }
+
     .timeline-content {
         padding: 1.5rem;
     }
 
     .memory-card {
         padding: 1.5rem;
+    }
+
+    .footer {
+        background: linear-gradient(135deg, rgba(93, 78, 55, 0.95) 0%, rgba(139, 115, 85, 0.9) 100%),
+            url('assets/images/common/minhkhue10.jpg') center/cover no-repeat;
+        background-attachment: scroll;
     }
 
     .footer-content {
@@ -1559,79 +1650,79 @@ p {
     .hamburger {
         margin-right: 10px;
     }
-    
+
     /* Additional timeline fixes for small screens - left side with justified text */
     .timeline-item {
         padding-left: 40px;
         padding-right: 15px;
     }
-    
+
     .timeline-marker {
         left: 0px !important;
         right: auto !important;
         width: 35px;
         height: 35px;
     }
-    
+
     .timeline-marker img {
         width: 25px;
         height: 25px;
     }
-    
+
     .timeline-content {
         width: calc(100% - 10px);
         padding: 1.2rem;
         text-align: justify;
     }
-    
+
     /* Điều chỉnh cho màn hình rất nhỏ */
     .about-section {
         padding: 2.5rem 0 !important;
     }
-    
+
     .about-text h2 {
         font-size: 1.6rem !important;
     }
-    
+
     .about-text p {
         font-size: 0.95rem !important;
     }
-    
+
     .about-stat .stat-number {
         font-size: 1.4rem !important;
     }
-    
+
     .about-stat .stat-label {
         font-size: 0.7rem !important;
     }
-    
+
     /* Hình ảnh nhỏ hơn trên màn hình nhỏ */
     .image-stack {
         height: 250px !important;
     }
-    
+
     .stacked-image {
         width: 150px !important;
         height: 200px !important;
         object-fit: cover;
         object-position: center top;
     }
-    
+
     .stacked-image:nth-child(1) {
         left: 50% !important;
         transform: translateX(-50%) rotate(-3deg) !important;
     }
-    
+
     .stacked-image:nth-child(2) {
         left: 15% !important;
         transform: rotate(2deg) !important;
     }
-    
+
     .stacked-image:nth-child(3) {
         right: 15% !important;
         transform: rotate(-1deg) !important;
     }
-    
+
     /* Nút back-to-top nhỏ hơn */
     button[style*="position: fixed"] {
         bottom: 15px !important;
@@ -1640,8 +1731,8 @@ p {
         height: 40px !important;
         font-size: 0.8rem !important;
     }
-    
-    
+
+
     .timeline-content p {
         text-align: justify !important;
         text-justify: inter-word;
@@ -1649,15 +1740,15 @@ p {
         word-spacing: normal;
         line-height: 1.6;
     }
-    
+
     .timeline-content h3 {
         text-align: left;
     }
-    
+
     .timeline-date {
         text-align: left;
     }
-    
+
     .timeline::before {
         left: 17px;
         right: auto;
@@ -1705,6 +1796,20 @@ img {
     object-position: center top;
 }
 
+/* Background image optimization */
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+}
+
 /* Specific optimizations for different image contexts */
 .hero-photo,
 .gallery-item img,
@@ -1724,6 +1829,7 @@ img[src*="thoi-noi"] {
 
 /* Mobile-specific face optimization */
 @media (max-width: 768px) {
+
     .hero-photo,
     .gallery-item img,
     .timeline-image img,
