@@ -65,6 +65,7 @@ html {
         overflow-x: hidden;
     }
     
+    
     /* Fix container overflow and expand for mobile */
     .container {
         width: 100%;
@@ -1254,12 +1255,107 @@ p {
         max-width: 100%;
         overflow-x: hidden;
     }
-
+    
+    /* Mobile layout cho about section - có hình ảnh */
+    .about-section {
+        padding: 3rem 0 !important;
+        margin-bottom: 2rem !important;
+        min-height: auto !important;
+        position: relative !important;
+        z-index: 10 !important;
+    }
+    
+    /* Đảm bảo about section luôn hiển thị đầy đủ trên mobile */
+    .about-section::after {
+        content: '';
+        display: block;
+        height: 100px;
+        width: 100%;
+    }
+    
+    .about-content {
+        padding: 0 1rem !important;
+    }
+    
+    .about-text h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .about-text p {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+        margin-bottom: 1.2rem !important;
+        text-align: justify !important;
+        padding: 0 !important;
+    }
+    
     .about-stats {
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
+        margin-top: 2rem !important;
+        gap: 1rem !important;
+        justify-content: center !important;
+    }
+    
+    .about-stat {
+        flex: 1 !important;
+        min-width: 80px !important;
+    }
+    
+    .about-stat .stat-number {
+        font-size: 1.6rem !important;
+    }
+    
+    .about-stat .stat-label {
+        font-size: 0.8rem !important;
+    }
+    
+    /* Hiển thị image stack trên mobile với layout tối ưu */
+    .about-image {
+        display: block !important;
+        margin-top: 2rem !important;
+    }
+    
+    .image-stack {
+        height: 300px !important;
+        position: relative !important;
+    }
+    
+    .stacked-image {
+        width: 200px !important;
+        height: 250px !important;
+    }
+    
+    .stacked-image:nth-child(1) {
+        top: 0 !important;
+        left: 50% !important;
+        transform: translateX(-50%) rotate(-5deg) !important;
+        z-index: 3 !important;
+    }
+    
+    .stacked-image:nth-child(2) {
+        top: 20px !important;
+        left: 20% !important;
+        transform: rotate(3deg) !important;
+        z-index: 2 !important;
+    }
+    
+    .stacked-image:nth-child(3) {
+        top: 20px !important;
+        right: 20% !important;
+        transform: rotate(-2deg) !important;
+        z-index: 1 !important;
+    }
+    
+
+    /* Nút back-to-top trên mobile */
+    button[style*="position: fixed"] {
+        bottom: 20px !important;
+        right: 20px !important;
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 0.9rem !important;
+        z-index: 999 !important;
     }
 
     .image-stack {
@@ -1393,6 +1489,62 @@ p {
         padding: 1.2rem;
         text-align: justify;
     }
+    
+    /* Điều chỉnh cho màn hình rất nhỏ */
+    .about-section {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .about-text h2 {
+        font-size: 1.6rem !important;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem !important;
+    }
+    
+    .about-stat .stat-number {
+        font-size: 1.4rem !important;
+    }
+    
+    .about-stat .stat-label {
+        font-size: 0.7rem !important;
+    }
+    
+    /* Hình ảnh nhỏ hơn trên màn hình nhỏ */
+    .image-stack {
+        height: 250px !important;
+    }
+    
+    .stacked-image {
+        width: 150px !important;
+        height: 200px !important;
+    }
+    
+    .stacked-image:nth-child(1) {
+        left: 50% !important;
+        transform: translateX(-50%) rotate(-3deg) !important;
+    }
+    
+    .stacked-image:nth-child(2) {
+        left: 15% !important;
+        transform: rotate(2deg) !important;
+    }
+    
+    .stacked-image:nth-child(3) {
+        right: 15% !important;
+        transform: rotate(-1deg) !important;
+    }
+    
+    /* Nút back-to-top nhỏ hơn */
+    button[style*="position: fixed"] {
+        bottom: 15px !important;
+        right: 15px !important;
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 0.8rem !important;
+    }
+    
     
     .timeline-content p {
         text-align: justify !important;

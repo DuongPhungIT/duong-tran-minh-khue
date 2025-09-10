@@ -648,6 +648,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Apply Android optimizations first
     optimizeForAndroid();
     
+    
     initTooltips();
     
     // Add loading animation
@@ -693,16 +694,17 @@ function createScrollProgress() {
 createScrollProgress();
 console.log('📊 Scroll progress bar đã được khởi tạo');
 
+
 // Add back to top button
 function createBackToTop() {
     const backToTop = document.createElement('button');
     backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
     backToTop.style.cssText = `
         position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
         background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
         color: white;
         border: none;
