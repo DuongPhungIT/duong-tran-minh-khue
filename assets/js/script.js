@@ -899,6 +899,94 @@ function addImageLoadingAnimation() {
 // Initialize image loading
 addImageLoadingAnimation();
 
+// Hiệu ứng hoa rơi
+function createFallingFlowers() {
+    const flowers = ['🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀','🍀'];
+    const flowerContainer = document.createElement('div');
+    flowerContainer.id = 'flower-container';
+    flowerContainer.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+    `;
+    document.body.appendChild(flowerContainer);
+
+    function createFlower() {
+        const flower = document.createElement('div');
+        const randomFlower = flowers[Math.floor(Math.random() * flowers.length)];
+        flower.textContent = randomFlower;
+        const randomX = Math.random() * 100;
+        const randomAngle = Math.random() * 60 - 30; // Góc xéo từ -30 đến +30 độ
+        flower.style.cssText = `
+            position: absolute;
+            font-size: ${Math.random() * 20 + 15}px;
+            left: ${randomX}%;
+            top: -50px;
+            animation: fallDiagonal ${Math.random() * 3 + 5}s linear infinite;
+            opacity: ${Math.random() * 0.7 + 0.3};
+            transform: rotate(${randomAngle}deg);
+            animation-delay: ${Math.random() * 2}s;
+        `;
+        
+        flowerContainer.appendChild(flower);
+        
+        // Xóa hoa sau khi rơi xong
+        setTimeout(() => {
+            if (flower.parentNode) {
+                flower.parentNode.removeChild(flower);
+            }
+        }, 8000);
+    }
+
+    // Tạo hoa định kỳ
+    setInterval(createFlower, 800);
+    
+    // Tạo hoa ngay lập tức
+    for (let i = 0; i < 5; i++) {
+        setTimeout(createFlower, i * 200);
+    }
+}
+
+// Thêm CSS animation cho hoa rơi
+const flowerStyle = document.createElement('style');
+flowerStyle.textContent = `
+    @keyframes fallDiagonal {
+        0% {
+            transform: translateY(-100px) translateX(0px) rotate(0deg);
+            opacity: 0.8;
+        }
+        10% {
+            opacity: 1;
+        }
+        50% {
+            transform: translateY(50vh) translateX(50px) rotate(180deg);
+        }
+        90% {
+            opacity: 0.8;
+        }
+        100% {
+            transform: translateY(100vh) translateX(100px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+    
+    /* Tối ưu hóa cho mobile */
+    @media (max-width: 768px) {
+        #flower-container {
+            display: none; /* Tắt hiệu ứng hoa rơi trên mobile để tối ưu hiệu suất */
+        }
+    }
+`;
+document.head.appendChild(flowerStyle);
+
+// Khởi tạo hiệu ứng hoa rơi
+createFallingFlowers();
+
 console.log('🌸 Album Bé Khuê đã được khởi tạo thành công! 🌸');
 console.log('💖 Chúc mừng ba Dương Anh Phụng và mẹ Trần Thị Thu Nhiên có một album đẹp để lưu giữ những kỷ niệm quý giá của bé gái Dương Trần Minh Khuê! 💖');
 console.log('🎀 Sinh nhật: 11-09-2024 🎀');

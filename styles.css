@@ -1243,6 +1243,31 @@ p {
     backdrop-filter: blur(10px);
 }
 
+/* Đảm bảo các phần tử quan trọng có z-index cao hơn hoa rơi */
+.navbar {
+    z-index: 1000 !important;
+}
+
+.hero-content {
+    z-index: 10 !important;
+}
+
+.timeline {
+    z-index: 10 !important;
+}
+
+.gallery-section {
+    z-index: 10 !important;
+}
+
+.about-section {
+    z-index: 10 !important;
+}
+
+.footer {
+    z-index: 10 !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
