@@ -123,9 +123,6 @@ const galleryData = {
         { id: "monthly_IMG_7695", src: "assets/images/monthly/IMG_7695.JPG", alt: "IMG_7695", title: "Đầy Tháng - Khoảnh Khắc", description: "Ảnh monthly", icon: "fas fa-calendar-check", date: "2024-10-11", category: "monthly" }
     ],
 
-    // Danh mục: Hoạt Động
-  
-
     // Danh mục: Thôi Nôi
     "thoi-noi": [
         { id: "thoi-noi_VDAL9530", src: "assets/images/thoi-noi/VDAL9530.JPG", alt: "VDAL9530", title: "Thôi Nôi - Khoảnh Khắc", description: "Ảnh thôi nôi", icon: "fas fa-birthday-cake", date: "2025-09-11", category: "thoi-noi" },

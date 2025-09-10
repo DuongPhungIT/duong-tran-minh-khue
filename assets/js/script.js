@@ -221,7 +221,6 @@ function updateGalleryStats() {
     document.getElementById('total-images').textContent = stats.total;
     document.getElementById('birth-count').textContent = stats.birth || 0;
     document.getElementById('monthly-count').textContent = stats.monthly || 0;
-    document.getElementById('activities-count').textContent = stats.activities || 0;
     document.getElementById('thoi-noi-count').textContent = stats['thoi-noi'] || 0;
     document.getElementById('family-count').textContent = stats.family || 0;
 }
@@ -552,6 +551,20 @@ function preventHorizontalScroll() {
             e.preventDefault();
         }
     }, { passive: false });
+    
+    // Additional horizontal scroll prevention
+    document.addEventListener('scroll', () => {
+        if (window.scrollX !== 0) {
+            window.scrollTo(0, window.scrollY);
+        }
+    }, { passive: true });
+    
+    // Prevent horizontal scroll on window resize
+    window.addEventListener('resize', () => {
+        if (window.scrollX !== 0) {
+            window.scrollTo(0, window.scrollY);
+        }
+    });
 }
 
 // Android detection and optimization
