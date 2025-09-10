@@ -276,14 +276,19 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Parallax effect for hero section
+// Parallax effect for hero section - completely disabled for mobile
 window.addEventListener('scroll', () => {
+    // Completely disable parallax on mobile devices for better performance
+    if (window.innerWidth <= 768 || /Android/i.test(navigator.userAgent) || isMobile()) {
+        return;
+    }
+    
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
     const heroContent = document.querySelector('.hero-content');
     
     if (hero && heroContent) {
-        const rate = scrolled * -0.5;
+        const rate = scrolled * -0.2; // Further reduced intensity
         heroContent.style.transform = `translateY(${rate}px)`;
     }
 });
@@ -436,31 +441,85 @@ style.textContent = `
 
 document.head.appendChild(style);
 
-// Performance optimization: Throttle scroll events
+// Performance optimization: Enhanced throttle for mobile
 function throttle(func, limit) {
     let inThrottle;
+    let lastCall = 0;
     return function() {
+        const now = Date.now();
         const args = arguments;
         const context = this;
-        if (!inThrottle) {
+        
+        if (now - lastCall >= limit) {
             func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
+            lastCall = now;
         }
     }
 }
 
-// Apply throttling to scroll events
+// Mobile-optimized scroll throttling
+const scrollThrottleLimit = isAndroid() ? 100 : 32; // Higher limit for Android
+
+// Apply throttling to scroll events - optimized for mobile
 window.addEventListener('scroll', throttle(() => {
+    // Skip scroll animations on mobile/Android for better performance
+    if (window.innerWidth <= 768 || /Android/i.test(navigator.userAgent)) {
+        return;
+    }
+    
     // Scroll-based animations
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll('.parallax');
     
     parallaxElements.forEach(element => {
-        const speed = element.dataset.speed || 0.5;
+        const speed = element.dataset.speed || 0.3; // Reduced speed
         element.style.transform = `translateY(${scrolled * speed}px)`;
     });
-}, 16));
+}, scrollThrottleLimit));
+
+// Additional scroll optimization for Android
+if (isAndroid()) {
+    let scrollTimeout;
+    let lastScrollTop = 0;
+    let scrollDirection = 0;
+    
+    window.addEventListener('scroll', () => {
+        const currentScrollTop = window.pageYOffset;
+        
+        // Determine scroll direction
+        if (currentScrollTop > lastScrollTop) {
+            scrollDirection = 1; // Scrolling down
+        } else {
+            scrollDirection = -1; // Scrolling up
+        }
+        
+        lastScrollTop = currentScrollTop;
+        
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            // Debounced scroll end handler for Android
+            document.body.classList.remove('scrolling');
+            scrollDirection = 0;
+        }, 150);
+        
+        document.body.classList.add('scrolling');
+    }, { passive: true });
+    
+    // Add momentum control for Android
+    let momentumTimeout;
+    document.addEventListener('touchmove', (e) => {
+        clearTimeout(momentumTimeout);
+        momentumTimeout = setTimeout(() => {
+            // Reduce momentum after touch ends
+            document.body.style.overflowY = 'auto';
+        }, 100);
+    }, { passive: true });
+    
+    // Prevent momentum scrolling on Android
+    document.addEventListener('touchstart', () => {
+        document.body.style.overflowY = 'auto';
+    }, { passive: true });
+}
 
 // Initialize tooltips for gallery items
 function initTooltips() {
@@ -472,8 +531,110 @@ function initTooltips() {
     });
 }
 
+// Prevent horizontal scrolling
+function preventHorizontalScroll() {
+    let startX = 0;
+    let startY = 0;
+    
+    document.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    }, { passive: true });
+    
+    document.addEventListener('touchmove', (e) => {
+        const currentX = e.touches[0].clientX;
+        const currentY = e.touches[0].clientY;
+        const diffX = Math.abs(currentX - startX);
+        const diffY = Math.abs(currentY - startY);
+        
+        // If horizontal movement is greater than vertical, prevent it
+        if (diffX > diffY && diffX > 10) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+}
+
+// Android detection and optimization
+function isAndroid() {
+    return /Android/i.test(navigator.userAgent);
+}
+
+function isMobile() {
+    return window.innerWidth <= 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+function optimizeForAndroid() {
+    if (isAndroid() || isMobile()) {
+        // Disable smooth scrolling on Android and mobile
+        document.documentElement.style.scrollBehavior = 'auto';
+        document.body.style.scrollBehavior = 'auto';
+        
+        // Disable CSS smooth scrolling globally and disable all animations/transforms
+        const style = document.createElement('style');
+        style.textContent = `
+            html {
+                scroll-behavior: auto !important;
+            }
+            * {
+                scroll-behavior: auto !important;
+                transition-duration: 0.2s !important;
+                animation-duration: 0.3s !important;
+            }
+            .floating-card {
+                animation: none !important;
+                transform: none !important;
+            }
+            .hero-content {
+                transform: none !important;
+            }
+            .scroll-indicator {
+                animation: none !important;
+            }
+            .cta-button::before {
+                transition: none !important;
+            }
+            .parallax {
+                transform: none !important;
+            }
+            .hero::before {
+                animation: none !important;
+            }
+            .gallery-item:hover {
+                transform: none !important;
+            }
+            .memory-card:hover {
+                transform: none !important;
+            }
+            .stacked-image:hover {
+                transform: none !important;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Override smooth scrolling in scrollToSection function
+        window.scrollToSection = function(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const offsetTop = section.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'auto' // Force auto behavior on mobile
+                });
+            }
+        };
+        
+        console.log('🤖 Mobile/Android detected - scroll optimizations applied');
+    }
+}
+
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Prevent horizontal scrolling
+    preventHorizontalScroll();
+    
+    // Apply Android optimizations first
+    optimizeForAndroid();
+    
     initTooltips();
     
     // Add loading animation
@@ -501,18 +662,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Add scroll progress indicator
 function createScrollProgress() {
-    const progressBar = document.createElement('div');
-    progressBar.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 3px;
-        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-        z-index: 9999;
-        transition: width 0.1s ease;
-    `;
-    document.body.appendChild(progressBar);
+    const progressBar = document.querySelector('.scroll-progress-bar');
+    if (!progressBar) {
+        console.error('Không tìm thấy scroll progress bar element');
+        return;
+    }
     
     window.addEventListener('scroll', () => {
         const scrollTop = document.documentElement.scrollTop;
@@ -524,6 +678,7 @@ function createScrollProgress() {
 
 // Initialize scroll progress
 createScrollProgress();
+console.log('📊 Scroll progress bar đã được khởi tạo');
 
 // Add back to top button
 function createBackToTop() {
@@ -616,21 +771,63 @@ function getCurrentSection() {
     return currentSection;
 }
 
-// Add touch support for mobile devices
+// Add touch support for mobile devices - optimized for Android
 let touchStartY = 0;
 let touchEndY = 0;
+let touchStartTime = 0;
+let isScrolling = false;
+let lastTouchY = 0;
+let touchVelocity = 0;
+let touchMomentum = 0;
 
+// Enhanced touch handling for Android
 document.addEventListener('touchstart', (e) => {
     touchStartY = e.changedTouches[0].screenY;
-});
+    lastTouchY = touchStartY;
+    touchStartTime = Date.now();
+    isScrolling = false;
+    touchVelocity = 0;
+    touchMomentum = 0;
+}, { passive: true });
+
+document.addEventListener('touchmove', (e) => {
+    const currentY = e.changedTouches[0].screenY;
+    const deltaY = currentY - lastTouchY;
+    const deltaTime = Date.now() - touchStartTime;
+    
+    // Calculate velocity to detect fast scrolling
+    if (deltaTime > 0) {
+        touchVelocity = Math.abs(deltaY) / deltaTime;
+    }
+    
+    // Mark as scrolling to prevent swipe gestures during scroll
+    isScrolling = true;
+    lastTouchY = currentY;
+    
+    // Prevent excessive momentum on Android
+    if (isAndroid() && touchVelocity > 2) {
+        // Reduce scroll momentum by adding resistance
+        e.preventDefault();
+        return false;
+    }
+}, { passive: false });
 
 document.addEventListener('touchend', (e) => {
     touchEndY = e.changedTouches[0].screenY;
-    handleSwipe();
-});
+    const touchDuration = Date.now() - touchStartTime;
+    
+    // Only handle swipe if it was a quick gesture (not scrolling)
+    if (!isScrolling && touchDuration < 300 && touchVelocity < 1) {
+        handleSwipe();
+    }
+    
+    // Reset touch state
+    touchVelocity = 0;
+    touchMomentum = 0;
+}, { passive: true });
 
 function handleSwipe() {
-    const swipeThreshold = 50;
+    const swipeThreshold = 150; // Increased threshold for Android
     const diff = touchStartY - touchEndY;
     
     if (Math.abs(diff) > swipeThreshold) {
