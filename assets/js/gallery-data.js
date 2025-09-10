@@ -16,7 +16,7 @@ const galleryData = {
             id: "birth_001",
             src: "assets/thumbs/birth/IMG_7285.JPG",
             alt: "Bé Khuê chào đời",
-            title: "👶 Ngày Con Chào Đời 👶",
+            title: "Ngày Con Chào Đời",
             description: "Khoảnh khắc thiêng liêng nhất trong đời ba - khi con cất tiếng khóc đầu tiên",
             icon: "fas fa-baby",
             date: "2024-09-11",

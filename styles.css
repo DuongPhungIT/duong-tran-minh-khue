@@ -463,6 +463,7 @@ p {
 .hero-photo {
     height: 400px;
     object-fit: cover;
+    object-position: center top;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-medium);
     transition: transform .5s ease, box-shadow .5s ease;
@@ -666,6 +667,7 @@ p {
     width: 100%;
     height: 150px;
     object-fit: cover;
+    object-position: center top;
     transition: var(--transition);
 }
 
@@ -728,6 +730,7 @@ p {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    object-position: center top;
     transition: var(--transition);
 }
 
@@ -939,6 +942,8 @@ p {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-medium);
     transition: var(--transition);
+    object-fit: cover;
+    object-position: center top;
 }
 
 .stacked-image:nth-child(1) {
@@ -1059,6 +1064,7 @@ p {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
+    object-position: center top;
     border-radius: var(--border-radius);
 }
 
@@ -1213,6 +1219,8 @@ p {
         height: auto;
         max-height: none;
         aspect-ratio: auto;
+        object-fit: cover;
+        object-position: center top;
         border-radius: 24px;
         display: block;
     }
@@ -1324,6 +1332,8 @@ p {
     .stacked-image {
         width: 200px !important;
         height: 250px !important;
+        object-fit: cover;
+        object-position: center top;
     }
     
     .stacked-image:nth-child(1) {
@@ -1519,6 +1529,8 @@ p {
     .stacked-image {
         width: 150px !important;
         height: 200px !important;
+        object-fit: cover;
+        object-position: center top;
     }
     
     .stacked-image:nth-child(1) {
@@ -1600,5 +1612,38 @@ p {
 @media (prefers-reduced-motion: no-preference) {
     html {
         scroll-behavior: smooth;
+    }
+}
+
+/* Face-focused image display optimization */
+img {
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Specific optimizations for different image contexts */
+.hero-photo,
+.gallery-item img,
+.timeline-image img,
+.stacked-image,
+.lightbox-content {
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Ensure face visibility in portrait images */
+img[src*="birth"],
+img[src*="monthly"],
+img[src*="thoi-noi"] {
+    object-position: center 30%;
+}
+
+/* Mobile-specific face optimization */
+@media (max-width: 768px) {
+    .hero-photo,
+    .gallery-item img,
+    .timeline-image img,
+    .stacked-image {
+        object-position: center 25%;
     }
 }
