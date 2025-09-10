@@ -292,6 +292,7 @@ p {
     font-weight: 500;
     transition: var(--transition);
     position: relative;
+    font-family: 'Dancing Script', cursive;
 }
 
 .nav-menu a:hover {
@@ -725,7 +726,7 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    /* height: 4px; */
     background: linear-gradient(90deg, var(--vintage-gold), var(--vintage-rose), var(--vintage-gold));
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
@@ -1305,6 +1306,7 @@ p {
         display: block;
         border-radius: var(--border-radius);
         transition: all 0.3s ease;
+        font-family: 'Dancing Script', cursive;
     }
 
     .nav-menu a:hover {
@@ -1645,6 +1647,7 @@ p {
     .nav-menu a {
         font-size: 1.1rem;
         padding: 0.8rem;
+        font-family: 'Dancing Script', cursive;
     }
 
     .hamburger {
