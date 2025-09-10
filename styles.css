@@ -13,18 +13,21 @@ html, body {
 }
 
 :root {
-    --primary-color: #ff69b4;
-    --secondary-color: #87ceeb;
-    --accent-color: #ffb6c1;
-    --text-primary: #4a4a4a;
-    --text-secondary: #8a8a8a;
-    --bg-primary: #ffffff;
-    --bg-secondary: #fef7f7;
-    --bg-accent: #fff0f5;
-    --shadow-light: 0 4px 25px rgba(255, 105, 180, 0.1);
-    --shadow-medium: 0 8px 35px rgba(255, 105, 180, 0.15);
+    --primary-color: #d4a574;
+    --secondary-color: #f4e4c1;
+    --accent-color: #e8c5a0;
+    --text-primary: #5d4e37;
+    --text-secondary: #8b7355;
+    --bg-primary: #fefcf8;
+    --bg-secondary: #f9f5f0;
+    --bg-accent: #f2ede4;
+    --shadow-light: 0 4px 25px rgba(212, 165, 116, 0.15);
+    --shadow-medium: 0 8px 35px rgba(212, 165, 116, 0.2);
     --border-radius: 20px;
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --vintage-gold: #c9a96e;
+    --vintage-cream: #f7f3e9;
+    --vintage-rose: #e8b4a0;
 }
 
 html {
@@ -345,8 +348,20 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ff6b6b" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%234ecdc4" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffe66d" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="vintage-pattern" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="%23d4a574" opacity="0.1"/><circle cx="80" cy="80" r="1.5" fill="%23c9a96e" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="%23e8b4a0" opacity="0.1"/><circle cx="30" cy="70" r="1.5" fill="%23f4e4c1" opacity="0.1"/><circle cx="70" cy="30" r="1" fill="%23e8c5a0" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23vintage-pattern)"/></svg>');
+    opacity: 0.4;
+}
+
+.hero::after {
+    content: '🌸 💕 🌸';
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    font-size: 2.5rem;
+    animation: float 8s ease-in-out infinite;
+    opacity: 0.2;
+    z-index: 0;
+    color: var(--vintage-gold);
 }
 
 .hero-content {
@@ -454,10 +469,24 @@ p {
 .floating-card {
     position: relative;
     animation: float 6s ease-in-out infinite;
-    padding: 10px;
+    padding: 15px;
     border-radius: 32px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
-    box-shadow: 0 20px 50px rgba(0,0,0,0.08), var(--shadow-medium);
+    background: linear-gradient(180deg, rgba(254,252,248,0.95), rgba(249,245,240,0.9));
+    box-shadow: 0 20px 50px rgba(212,165,116,0.15), var(--shadow-medium);
+    border: 2px solid var(--vintage-gold);
+}
+
+.floating-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--vintage-gold), var(--vintage-rose), var(--vintage-gold));
+    border-radius: 34px;
+    z-index: -1;
+    opacity: 0.3;
 }
 
 .hero-photo {
@@ -504,16 +533,19 @@ p {
     position: absolute;
     bottom: 16px;
     left: 16px;
-    background: rgba(255, 255, 255, 0.92);
-    padding: 10px 14px;
-    border-radius: 999px;
+    background: rgba(254, 252, 248, 0.95);
+    padding: 12px 16px;
+    border-radius: 25px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     color: var(--text-primary);
     font-weight: 600;
     backdrop-filter: blur(12px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 30px rgba(212,165,116,0.2);
+    border: 1px solid var(--vintage-gold);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
 }
 
 @keyframes float {
@@ -630,11 +662,23 @@ p {
 }
 
 .timeline-content {
-    background: white;
+    background: var(--vintage-cream);
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
     position: relative;
+    border: 1px solid var(--vintage-gold);
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--vintage-gold), var(--vintage-rose), var(--vintage-gold));
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .timeline-content p {
@@ -719,6 +763,25 @@ p {
     box-shadow: var(--shadow-light);
     transition: var(--transition);
     cursor: pointer;
+    border: 2px solid var(--vintage-gold);
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 0%, rgba(212,165,116,0.1) 50%, transparent 100%);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
 }
 
 .gallery-item:hover {
@@ -739,11 +802,18 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-    color: white;
+    background: linear-gradient(transparent, rgba(93, 78, 55, 0.9));
+    color: var(--vintage-cream);
     padding: 2rem 1.5rem 1.5rem;
     transform: translateY(100%);
     transition: var(--transition);
+    border-top: 2px solid var(--vintage-gold);
+}
+
+.gallery-overlay h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
+    color: var(--vintage-cream);
 }
 
 .gallery-item:hover .gallery-overlay {
@@ -944,6 +1014,20 @@ p {
     transition: var(--transition);
     object-fit: cover;
     object-position: center top;
+    border: 3px solid var(--vintage-gold);
+}
+
+.stacked-image::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(45deg, var(--vintage-gold), var(--vintage-rose), var(--vintage-gold));
+    border-radius: calc(var(--border-radius) + 3px);
+    z-index: -1;
+    opacity: 0.4;
 }
 
 .stacked-image:nth-child(1) {
@@ -1646,4 +1730,118 @@ img[src*="thoi-noi"] {
     .stacked-image {
         object-position: center 25%;
     }
+}
+
+/* Vintage decorative elements */
+.vintage-decoration {
+    position: relative;
+}
+
+.vintage-decoration::before {
+    content: '🌸';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    font-size: 1.5rem;
+    color: var(--vintage-gold);
+    opacity: 0.6;
+}
+
+.vintage-decoration::after {
+    content: '💕';
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    font-size: 1.5rem;
+    color: var(--vintage-rose);
+    opacity: 0.6;
+}
+
+/* Vintage typography enhancements */
+.section-header h2 {
+    position: relative;
+}
+
+.section-header h2::before {
+    content: '✨';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: var(--vintage-gold);
+}
+
+.section-header h2::after {
+    content: '✨';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: var(--vintage-gold);
+}
+
+/* Vintage button styles */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::after {
+    content: '💖';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Vintage filter buttons */
+.filter-btn {
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+}
+
+.filter-btn.active::before {
+    content: '🌸';
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+}
+
+/* Vintage stats styling */
+.stat-item {
+    position: relative;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--vintage-gold), var(--vintage-rose));
+    border-radius: 1px;
+}
+
+/* Vintage memory cards */
+.memory-card {
+    position: relative;
+    border: 1px solid var(--vintage-gold);
+}
+
+.memory-card::after {
+    content: '💝';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 1.2rem;
+    opacity: 0.7;
 }
